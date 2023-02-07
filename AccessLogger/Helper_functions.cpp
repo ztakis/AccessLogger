@@ -99,51 +99,6 @@ void lcdProgramMode(const char *txt) {    // LCD program mode
 
 void pollButtons() {    // Poll buttons and initiate corresponding actions
   if (programMode) {    // Check if in program mode
-    if (MasterButton.isPressed()) {    // Check if Master button is pressed
-      MainLed.on(red);
-      lcdProgramMode("*EEPROM  DELETE*");
-      Serial.println(F("Master Button Pressed"));
-      Serial.println(F("Master Card will be Erased! in 5 seconds"));
-      Serial.println(F("EEPROM will be Erased! in 10 seconds"));
-      bool buttonState = pollMasterButton(5000); // Give user enough time to cancel operation
-      if (buttonState == true && MasterButton.isPressed()) {
-        bool buttonState = pollMasterButton(5000);
-        if (buttonState == true && MasterButton.isPressed()) {     // > 10s sec
-          while (true) {
-          lcdProgramMode("*ERASING EEPROM*");
-          Serial.println(F("Erasing EEPROM..."));
-          clearEEPROM();
-          Serial.println(F("EEPROM erased successfully"));
-          delay(2000);
-          lcdProgramMode("*EEPROM  ERASED*");
-          delay(2000);
-          lcdProgramMode("*  RESTARTING  *");
-          Serial.println(F("Restarting..."));
-          delay(2000);
-          resetFunc();
-          }
-        }
-        else {                                              // > 5 sec & < 10 sec
-          while (true) {
-          lcdProgramMode("*ERASING MASTER*");
-          Serial.println(F("Erasing MASTER..."));
-          EEPROM.write(1, 0);                               // Reset Magic Number
-          Serial.println(F("Master Card Erased from device"));
-          delay(2000);
-          lcdProgramMode("*MASTER  ERASED*");
-          delay(2000);
-          lcdProgramMode("*  RESTARTING  *");
-          Serial.println(F("Restarting..."));
-          delay(2000);        
-          resetFunc();
-          }
-        }
-      }
-      Serial.println(F("Erase Cancelled"));
-      lcdProgramMode("*   CANCELED   *");
-      delay(1000);
-      lcdProgramMode("PUT PICC TO SCAN");
-    }
     if (AuxButton.isPressed()) {   // Check if Serial button is pressed
       MainLed.on(red);
       lcdProgramMode("* SLOT  DELETE *");
