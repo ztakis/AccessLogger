@@ -1,6 +1,7 @@
-# CS50x final project - RFID/NFC access control and logging
+# CS50x final project
+## RFID/NFC access control and logging
 
-<img src="https://raw.githubusercontent.com/ztakis/AccessLogger/main/screenshot.png" alt="main" width="1000" height="565"/>
+<img src="https://raw.githubusercontent.com/ztakis/AccessLogger/main/screenshot.png" alt="main"/>
 
 ## Description
 Based on the Arduino hardware, the 
