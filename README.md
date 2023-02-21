@@ -1,6 +1,12 @@
-# My CS50x Project
+# NFC/RFID access control and logging
+
+This is my CS50x final project
+
+## Features
 
 Arduino based NFC/RFID access control and logging
+
+
 
 ## Table of Contents
 
