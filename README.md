@@ -13,6 +13,7 @@ that includes a Flask web page for real time monitoring
 ## Table of Contents
 
 - [Hardware](#hardware)
+- [Softdware](#software)
 - [Usage](#usage)
 - [License](#license)
 
@@ -33,23 +34,18 @@ Basic connections:
 - LCD Keypad uses parallel and analog
 
 ## Software
+
 The sofware consists of two parts:
 1. The core part (Arduino's v2.0.x IDE) 
-- Used Arduino's version of C++
 - I tried to split the project in several files so it could better organized and more readable
 - I used a lot of functions and made some classes
 - The device can work standalone but for the more advanced stuff, needs usb serial connection
 - Good WiFi reception is needed, otherwise use the ntp vesion where WiFi is started on demand
--
-
 
 2. The web part (vscode + flask + sqlite3 on a Raspberry 4)
-- sdd
-- fdrgerrh
-
-
-The main part of the s
-I used Arduino's v2.0.x IDE for 
+- I tried to make a simple web page much like CS50's birthdays
+- Arduino's web client "prints" data to the server using GET
+- The web page can be set to auto reload for real time monitoring
 
 ## Usage
 
