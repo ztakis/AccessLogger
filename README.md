@@ -1,9 +1,11 @@
 # NFC/RFID access control and logging
-
 This is my CS50x final project
 
-## Features
 
+![screenshot.png](https://github.com/ztakis/AccessLogger/blob/main/screenshot.png)
+
+
+## Features
 Arduino based NFC/RFID access control and logging
 
 
