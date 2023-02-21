@@ -1,15 +1,30 @@
-# CS50x final project
-## RFID/NFC access control and logging
+# My CS50x Project
 
-<img src="https://raw.githubusercontent.com/ztakis/AccessLogger/main/screenshot.png" alt="main"/>
+Arduino based NFC/RFID access control and logging
 
-## Description
-Based on the Arduino hardware, the 
-## Hardware
-ertjhsdrhtsrtjdryn tsdtsrh
-## Software
-1. erreg
-2. tghhgg
-3. sdtfjfyj
+## Table of Contents
 
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
 
+## Installation
+
+To install the application, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Install the required dependencies using `npm install`.
+3. Start the server using `npm start`.
+
+## Usage
+
+To use the application, follow these steps:
+
+1. Open the application in your web browser.
+2. Create a new note by clicking the "New Note" button.
+3. Edit an existing note by clicking on its title.
+4. Delete a note by clicking on the trash can icon next to its title.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
