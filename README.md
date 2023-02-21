@@ -1,7 +1,7 @@
 # NFC/RFID access control and logging
 My final project for CS50x
 
-[![Watch the video](screenshot.png)](https://youtu.be/T-D1KVIuvjA)
+[![Watch the video](https://i9.ytimg.com/vi_webp/by-YmVJW6ls/mq2.webp?sqp=CLiC1Z8G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD4gZShbMA8=&rs=AOn4CLC7iRjJqomXbnA3zXJ-Fc8w7q1nrg)](https://youtu.be/by-YmVJW6ls)
 
 <!-- ![screenshot.png](screenshot.png) -->
 
