@@ -2,7 +2,7 @@
 This is my CS50x final project
 
 
-![screenshot.png](https://github.com/ztakis/AccessLogger/blob/main/screenshot.png)
+![screenshot.png](screenshot.png)
 
 
 ## Features
