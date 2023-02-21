@@ -1,14 +1,11 @@
 # NFC/RFID access control and logging
 This is my CS50x final project
 
-
 ![screenshot.png](screenshot.png)
 
-
-## Features
-Arduino based NFC/RFID access control and logging
-
-
+## Description
+Arduino based NFC/RFID access control and logging solution
+that includes a Flask web page for real time monitoring
 
 ## Table of Contents
 
