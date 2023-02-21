@@ -1,9 +1,10 @@
 # NFC/RFID access control and logging
 My final project for CS50x
 
-[![Watch the video](https://i9.ytimg.com/vi_webp/by-YmVJW6ls/mq2.webp?sqp=CLiC1Z8G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD4gZShbMA8=&rs=AOn4CLC7iRjJqomXbnA3zXJ-Fc8w7q1nrg)](https://youtu.be/by-YmVJW6ls)
+[![Watch the video](https://i9.ytimg.com/vi_webp/by-YmVJW6ls/mq2.webp?sqp=CLiC1Z8G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD4gZShbMA8=&rs=AOn4CLC7iRjJqomXbnA3zXJ-Fc8w7q1nrg)](https://youtu.be/by-YmVJW6ls) | [![Watch the video](https://i9.ytimg.com/vi_webp/nelEj20rjT4/mq3.webp?sqp=CJCH1Z8G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGE8gZShjMA8=&rs=AOn4CLDt7CYyAsUxJf053sL9CiGFFmJYTA)](https://youtu.be/nelEj20rjT4)
 
-[![Watch the video](https://i9.ytimg.com/vi_webp/nelEj20rjT4/mq3.webp?sqp=CJCH1Z8G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGE8gZShjMA8=&rs=AOn4CLDt7CYyAsUxJf053sL9CiGFFmJYTA)](https://youtu.be/nelEj20rjT4)
+[![Watch the video](https://i9.ytimg.com/vi_webp/aY_QvsBsoKk/mq3.webp?sqp=CLyJ1Z8G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBMgVSh_MA8=&rs=AOn4CLBhz_-eMkHvKqV4PrpWS_SdvyDj5A)](https://youtu.be/aY_QvsBsoKk)
+
 
 <!-- ![screenshot.png](screenshot.png) -->
 
