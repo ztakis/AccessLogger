@@ -32,6 +32,25 @@ Basic connections:
 - SD card uses SPI and RTC uses I2C
 - LCD Keypad uses parallel and analog
 
+## Software
+The sofware consists of two parts:
+1. The core part (Arduino's v2.0.x IDE) 
+- Used Arduino's version of C++
+- I tried to split the project in several files so it could better organized and more readable
+- I used a lot of functions and made some classes
+- The device can work standalone but for the more advanced stuff, needs usb serial connection
+- Good WiFi reception is needed, otherwise use the ntp vesion where WiFi is started on demand
+-
+
+
+2. The web part (vscode + flask + sqlite3 on a Raspberry 4)
+- sdd
+- fdrgerrh
+
+
+The main part of the s
+I used Arduino's v2.0.x IDE for 
+
 ## Usage
 
 To use the application, follow these steps:
