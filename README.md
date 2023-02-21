@@ -12,17 +12,25 @@ that includes a Flask web page for real time monitoring
 
 ## Table of Contents
 
-- [Installation](#installation)
+- [Hardware](#hardware)
 - [Usage](#usage)
 - [License](#license)
 
-## Installation
+## Hardware
+Since this is for CS50, I won't go into much detail about the hardware.
+I used the following:
 
-To install the application, follow these steps:
+- Arduino Mega 2560 with built in ESP8266 WiFi (RobotDyn)
+- MFRC-522 13.56MHz nfc/rfid reader
+- Data Logger Shield with SD card and real time clock (Adafruit)
+- LCD Keypad Shield
+- Simple custom board with RGB led and button(s)
 
-1. Clone the repository to your local machine.
-2. Install the required dependencies using `npm install`.
-3. Start the server using `npm start`.
+Basic connections:
+- Ardunino and ESP8266 WiFi, communicate using hardware serial
+- MFRC-522 uses SPI
+- SD card uses SPI and RTC uses I2C
+- LCD Keypad uses parallel and analog
 
 ## Usage
 
