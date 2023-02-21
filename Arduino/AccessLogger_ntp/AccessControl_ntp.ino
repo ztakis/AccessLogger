@@ -48,7 +48,7 @@ const uint8_t NTP_PACKET_SIZE = 48;         // NTP timestamp is in the first 48 
 const uint16_t UDP_TIMEOUT = 2000;          // Timeout in miliseconds to wait for an UDP packet to arrive
 uint8_t packetBuffer[NTP_PACKET_SIZE];      // Buffer to hold incoming and outgoing packets
 
-char timeServer[] = "ntp.grnet.gr";         // NTP server
+char timeServer[] = "ntp.nist.gov";         // NTP server
 const int GMT = 2;                          // Change this to adapt it to your time zone
 
 // Default Password
