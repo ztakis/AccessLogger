@@ -7,7 +7,7 @@ My final project for CS50x
 
 ## Youtube video
 
-[![Watch the video](media/thumb.jpg)](https://youtu.be/EEG_-Cr_zng)
+[![Watch the video](media/thumb.jpg)](https://youtu.be/j5Nwe5qK4YY)
 
 ## Description
 
