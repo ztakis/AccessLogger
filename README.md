@@ -3,7 +3,7 @@ My final project for CS50x
 
 <!-- [![Watch the video](https://i9.ytimg.com/vi_webp/by-YmVJW6ls/mq2.webp?sqp=CLiC1Z8G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD4gZShbMA8=&rs=AOn4CLC7iRjJqomXbnA3zXJ-Fc8w7q1nrg)](https://youtu.be/by-YmVJW6ls) | [![Watch the video](https://i9.ytimg.com/vi_webp/nelEj20rjT4/mq3.webp?sqp=CJCH1Z8G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGE8gZShjMA8=&rs=AOn4CLDt7CYyAsUxJf053sL9CiGFFmJYTA)](https://youtu.be/nelEj20rjT4) -->
 
-[![Watch the video](https://i9.ytimg.com/vi/EEG_-Cr_zng/mqdefault.jpg?v=63f61309&sqp=CPyl2J8G&rs=AOn4CLB0MHYep5i7tpdbzLuv6SHdH8npew)](https://youtu.be/EEG_-Cr_zng)
+[![Watch the video](thumb.jpg)](https://youtu.be/EEG_-Cr_zng)
 
 
 <!-- ![screenshot.png](screenshot.png) -->
