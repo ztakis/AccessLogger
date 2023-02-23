@@ -3,8 +3,6 @@ My final project for CS50x
 
 ![screenshot](media/screenshot.png)
 
-<!-- [![Watch the video](https://i9.ytimg.com/vi_webp/by-YmVJW6ls/mq2.webp?sqp=CLiC1Z8G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGD4gZShbMA8=&rs=AOn4CLC7iRjJqomXbnA3zXJ-Fc8w7q1nrg)](https://youtu.be/by-YmVJW6ls) | [![Watch the video](https://i9.ytimg.com/vi_webp/nelEj20rjT4/mq3.webp?sqp=CJCH1Z8G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGE8gZShjMA8=&rs=AOn4CLDt7CYyAsUxJf053sL9CiGFFmJYTA)](https://youtu.be/nelEj20rjT4) -->
-
 ## Youtube video
 
 [![Watch the video](media/thumb.jpg)](https://youtu.be/j5Nwe5qK4YY)
