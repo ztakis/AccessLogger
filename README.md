@@ -122,7 +122,7 @@ The device logs most actions to SD card<br>
 I made an auto reload function for the web page but besides that,
 the functionality and the display are spartan.
 
-While minimal, can be used as a starting point to add more features like
+While minimal, it can be used as a starting point to add more features like
 filtered views, replicating or even replacing EEPROM, serving more than one device etc.
 I might continue overhauling this project for CS50w and CS50ai adding QRcode camera or
 AI camera for face recognition.
