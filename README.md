@@ -52,7 +52,7 @@ The sofware consists of two parts:
 
 ## Usage
 
-#### Basic standalone usage:
+#### Basic standalone usage
 
 1. Swipe a card over the reader. The device reads the card's id and searches the EEPROM for a match.
 If there is a possitive match, the RGB LED turns green, a record is created in the web server's database
@@ -68,7 +68,19 @@ press the aux button for 5 sec. Using the lcd and up/down buttons, we select the
 button. The id selected is deleted after 3 sec. After we finish, we press the reset button to restart the device.
 To use this method, we need to know the card's id in advance.
 
-3. 
+#### Initial setup
+
+The device cannot be used until we complete the next step.
+For the initial setup, we need to connect the device's USB port to a computer and either use Arduino's IDE serial console
+or putty or minicom etc. After we select the correct com port, if it's the first use of the device, we are asked for the 
+default password. The password is set in the firmware and we need to re-flash the device if we want to change it.
+After giving the correct password, we are asked to set up a master card. We swipe a card over the reader and that is registered
+as a master card from now on. Now we can use this mASTER card to enter program mode and add cards as described above.
+The device is now ready for use.
+
+#### Admin menu
+
+
 
 
 
