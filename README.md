@@ -60,8 +60,8 @@ and (if implemented) a relay can unlock a door, barricade or similar blocking me
 a match, the RGB LED turns red, the relay remains off and a record in red shows in the web page.
 
 2. To add or remove a card's id in EEPROM, we need to have the "Master" card which is created during the initial setup.
-After we swipe the master card over the reader, the device enters "Program mode". Then we swipe the card(s) it's status
-want to change: If the card's id is found in the EEPROM, then is deleted, otherwise added. When we finish adding and removing
+After we swipe the master card over the reader, the device enters "Program mode". Then we swipe the card it's status
+want to change. If the card's id is found in the EEPROM, then is deleted, otherwise added. When we finish adding and removing
 cards, we swipe the master card again to return to normal mode.
 If a card is lost(anavailable) and we want to remove it from EEPROM, we enter program mode using the master card and then
 press the aux button for 5 sec. Using the lcd and up/down buttons, we select the id we want to be removed and press the select
