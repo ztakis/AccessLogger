@@ -34,7 +34,6 @@ const char DAYS[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday",
 char ssid[] = SECRET_SSID;
 char pass[] = SECRET_PASS;
 int status = WL_IDLE_STATUS;
-char webServer[] = FLASK_SERVER;
 
 // NTP
 const uint16_t localPort = 2390;            // Local port to listen for UDP packets
@@ -46,7 +45,7 @@ char timeServer[] = "ntp.nist.gov";         // NTP server
 const int GMT = 2;                          // Change this to adapt it to your time zone
 
 // Default Password
-const String defaultPassword = "pass1234";  // :)
+const String defaultPassword = "pass1234";
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -75,9 +74,7 @@ RTC_PCF8523 rtc;
 
 // WiFi UDP
 WiFiEspUDP Udp;   // A UDP instance to let us send and receive packets over UDP
-
-// Initialize the WiFi client object
-WiFiEspClient client;
+// WiFiUDP Udp;   // When using the WiFiEspAT.h lib
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -92,9 +89,9 @@ uint8_t firstName[18];    // Stores first name (personal data) read from reader
 uint8_t lastName[18];     // Stores last name (personal data) read from reader
 uint8_t masterID[4];      // Stores master card's ID read from EEPROM
 uint8_t storedID[4];      // Stores an ID read from EEPROM
-uint8_t slotStart = 0;    // Stores the address in EEPROM where a card's ID starts
+uint8_t slotStart = 0;    // Stores EEPROM slot start // Stores EEPROM card's start address
 
-String inputPassword;     // Stores input password from serial console
+String inputPassword;     // Stores user input password from serial console
 
 
 ////////////////////////////  FUNCTION  PROTOTYPES  ////////////////////////////
@@ -166,7 +163,7 @@ void setup() {
   for (uint8_t i = 0; i < 100; i++) {
     filename[6] = i/10 + '0';
     filename[7] = i%10 + '0';
-    if (! SD.exists(filename)) {
+    if (! SD.exists(filename)) {    // Only open a new file if it doesn't exist ////////////////////////////////////
       logfile = SD.open(filename, FILE_WRITE);
       break;
     }
@@ -176,14 +173,8 @@ void setup() {
   }
   Serial.print(F("Logging to: "));
   Serial.println(filename);
-  Serial.println(F("------------------------------"));
 
-  checkForMaster();   // Check if a master card if defined
-
-  // Start WiFi
-  Serial.println(F("------------------------------"));
-  wifiInit();
-  printWifiStatus();
+  checkForMaster(); // Check if a master card if defined
   MainLed.cycle(blue, red, green, 150);
 
   Serial.println(F("------------------------------"));
@@ -211,45 +202,20 @@ void loop () {
   }
   while (! successRead);                // This will run at least once, then it will loop until we get a successful read
 
+  printDateTime();
+  printCardUID();
+  printUser();
 
-  Serial.println();
-  if (client.connect(webServer, 5000)) {
-
-    // Make a HTTP request
-    client.print("GET /getdata?data=");
-
-    printDateTime();
-    printCardUID();
-    printUser();
-
-    pollProgramMode();
-    if (programMode) {
-      lcdProgramMode("PUT PICC TO SCAN");
-    }
-    // End HTTP
-    client.println(" HTTP/1.1");
-    client.println("Host: 10.2.2.161");
-    client.println("Connection: close");
-    client.println();
-    client.flush();
-    client.stop();
-
-  }
-  else {                                // Some may prefer to disable the 'else' part
-    printDateTime();
-    printCardUID();
-    printUser();
-    pollProgramMode();
-    if (programMode) {
-      lcdProgramMode("PUT PICC TO SCAN");
-    }
+  pollProgramMode();
+  if (programMode) {
+    lcdProgramMode("PUT PICC TO SCAN");
   }
 
 }
 
 /////////////////////////////////    RESTART   /////////////////////////////////
 
-void(* resetFunc) (void) = 0;           // Declare reset function at address 0
+void(* resetFunc) (void) = 0;           // declare reset function at address 0
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -287,7 +253,6 @@ void pollProgramMode() {                // Check if in program mode
       Serial.println(F("Master card Scanned"));
       Serial.println(F("Exiting Program Mode"));
       logfile.println(F("Exiting Program Mode"));
-      client.println("Exiting%20Program%20Mode");
       Serial.println(F("------------------------------"));
       programMode = false;
       lcdProgramMode("*   EXITING    *");
@@ -297,14 +262,12 @@ void pollProgramMode() {                // Check if in program mode
     else {
       if ( isStored(scannedID) ) {            // If scanned card is known delete it
         Serial.println(F("I know this PICC, removing..."));
-        client.println("Removing%20known%20card");
         deleteID(scannedID);
         Serial.println("------------------------------");
         Serial.println(F("Scan a PICC to ADD or REMOVE to EEPROM"));
       }
       else {                                  // If scanned card is not known add it
         Serial.println(F("I do not know this PICC, adding..."));
-        client.println("Adding%20uknown%20card");
         writeID(scannedID);
         Serial.println(F("------------------------------"));
         Serial.println(F("Scan a PICC to ADD or REMOVE to EEPROM"));
@@ -316,7 +279,6 @@ void pollProgramMode() {                // Check if in program mode
       lcdProgramMode("*   ENTERING   *");
       delay(1500);
       logfile.print(F("Program Mode"));
-      client.println("Program%20Mode");
       logfile.println();
       Serial.println(F("Hello Master - Entered Program Mode"));
       uint8_t count = EEPROM.read(0);   // Read the first Byte of EEPROM that
@@ -341,4 +303,5 @@ void pollProgramMode() {                // Check if in program mode
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+
 

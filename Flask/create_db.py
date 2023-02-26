@@ -10,7 +10,7 @@ cur = conn.cursor()
 cur.execute("DROP TABLE IF EXISTS access_log")
 
 #Create users table  in db_web database
-sql ='''CREATE TABLE "access_log" (
+SQL ='''CREATE TABLE "access_log" (
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "unix" INTEGER,
     "date_time" TEXT,
@@ -19,7 +19,7 @@ sql ='''CREATE TABLE "access_log" (
     "last_name" TEXT,
     "comments" TEXT
 )'''
-cur.execute(sql)
+cur.execute(SQL)
 
 #commit changes
 conn.commit()

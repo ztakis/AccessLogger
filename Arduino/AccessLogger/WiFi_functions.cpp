@@ -1,4 +1,3 @@
-#include "WString.h"
 // WiFi related functions
 
 #include "WiFi_functions.h"

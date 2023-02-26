@@ -17,7 +17,7 @@ def history():
 
 
 @app.route('/getdata', methods=['GET'])
-def getData():
+def get_data():
     row = request.args.getlist('data')
     cur.execute("INSERT INTO access_log (unix, date_time, card_id, first_name, last_name, comments)\
                 VALUES(?, ?, ?, ?, ?, ?)", row)
@@ -28,5 +28,3 @@ def getData():
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
 
-
-#
