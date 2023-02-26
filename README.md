@@ -42,7 +42,7 @@ The sofware consists of two parts:
 - I tried to split the project in several files so it could better organized and more readable
 - I used a lot of functions and made some classes
 - The device can work standalone but for the more advanced stuff, needs usb serial connection
-- Good WiFi reception is needed, otherwise use the ntp vesion where WiFi is started on demand
+- Good WiFi reception is needed, otherwise use the ntp vesion where WiFi is started on demand only for rtc to ntp sync
 
 2. The web part (vscode + flask + sqlite3 on a Raspberry 4)
 - I tried to make a simple web page much like CS50's birthdays
@@ -51,13 +51,14 @@ The sofware consists of two parts:
 
 ## Usage
 
-To use the application, follow these steps:
+#### Basic standalone usage:
 
-1. Open the application in your web browser.
-2. Create a new note by clicking the "New Note" button.
-3. Edit an existing note by clicking on its title.
-4. Delete a note by clicking on the trash can icon next to its title.
+1. Swipe a card over the reader. The device reads the card's id and searches the EEPROM for a match.
+If there is a possitive match, the RGB LED turns green, a record is created in the web server's database
+and (if implemented) a relay can unlock a door, barricade or similar blocking mechanism. If there is not
+a match, the RGB LED turns red, the relay remains off and a record in red shows in the web page.
 
-## License
+2. To add or remove a card's id in EEPROM, we need to have the "Master" card which is created during the initial setup.
+After e the master card over the reader
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
